@@ -4,23 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="css/clock.css">
+    <link rel="stylesheet" href="css/toDoList.css">
+    <link rel="stylesheet" href="css/input.css">
+    <link rel="stylesheet" href="css/quotes.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <title>Momentum App</title>
 </head>
 <body>
+    <div id="greeting" class="hidden">
+        <span></span>
+    </div>
+    
+    
+    <div id="clock">
+        <p>00:00</p>
+    </div>
+    
     <form id="login-form" class="hidden">
         <input required maxlength="15" type="text" placeholder="What is your name?" />
-        <input type="submit" value="Log In" />
     </form>
-    <h2 id="clock">00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <div id="quote">
-        <span></span>
-        <span></span>
+    
+    
+    <form id="toDo-form">
+        <input type="text" placeholder="Write a To Do list" required />
+    </form>
+    
+    <div class="center">
+        <section class="todo-cmp">
+            <header class="todo-cmp__header">
+                <h2>To Do list</h2>
+                <p>March 4, 2016</p>
+            </header>
+            
+            <ul class="todo-cmp__list">
+            </ul>
+        </section>
+    </div>
+    
+    <section class="quote">
+        <blockquote class="callout quote EN">
+        </blockquote>
+    </section>
+    
+    <img id="bgImg">
+    
+    <br><br>
+    
+    <div class="widget">
+        <div class="left-panel panel">
+            <div class="date">
+                Monday, 20 Aug 2018
+            </div>
+            <div class="city">
+                Mumbai
+            </div>
+            <div class="temp">
+                <img src="img/sunny.png" alt="" width="45">
+                <span></span>
+            </div>
+        </div>
+        <div class="right-panel panel">
+            <img src="img/bear.png" alt="" width="150">
+        </div>
     </div>
 
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 </html>

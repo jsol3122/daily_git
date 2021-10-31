@@ -1,6 +1,8 @@
 const loginForm = document.querySelector("#login-form")
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector('#greeting');
+const span = document.querySelector('#greeting span');
+const list_name = document.querySelector('.todo-cmp__header h2');
 
 const HIDDEN_CLASSNAME = 'hidden';
 const USERNAME_KEY = 'username';
@@ -14,7 +16,8 @@ function onLoginSubmit(event){
 }
 
 function paintGreetings(username){
-    greeting.innerText = `Hello ${username}`;
+    span.innerText = `Hello ${username}`;
+    list_name.innerText = `${username}'s To Do list`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 

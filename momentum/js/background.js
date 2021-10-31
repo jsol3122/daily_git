@@ -1,11 +1,11 @@
 const images = [
-    "0.jpg", "1.jpg", "2.jpg"
+    "duck.jfif", "rabbit.jfif", "cat.jfif"
 ];
+const img = document.querySelector('#bgImg');
 
 const chosenImage = images[Math.floor(Math.random()*images.length)]
 
-const bgImage = document.createElement("img");
-bgImage.src = `img/${chosenImage}`;
+document.body.style.background = 'white';
+img.src =  `img/${chosenImage}`;
 
-document.body.appendChild(bgImage);
 
